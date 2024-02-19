@@ -1,0 +1,123 @@
+﻿TIPO  SITUADO;DISTRITO;DIRECCION COMPLETA;CLASE_VIAL;NOMBRE_VIAL;NUM;DIRECCION AUX;DEPENDENCIA;X;Y;LATITUD;LONGITUD
+Vía Pública;Arganzuela;Calle Arganda, 18 Frente a Calle Melilla;Calle;Arganda;18;Frente a Calle Melilla;;439955,98;4472467,77;40,40065439;-3,707573358
+Vía Pública;Arganzuela;Paseo  Santa María de la Cabeza, 45 ;Paseo; Santa María de la Cabeza;45;;;440757,28;4472644,3;40,40230203;-3,698147774
+Vía Pública;Arganzuela;Calle Alonso Carbonell, 2 ;Calle;Alonso Carbonell;2;;;440899,62;4471822,98;40,39491333;-3,696394229
+Dependencias Municipales;Arganzuela;Calle Guillermo Osma, 14 ;Calle;Guillermo Osma;14;;C.S.S JOSÉ DE VILLAREAL;440785,83;4471789,49;40,39460352;-3,697731815
+Dependencias Municipales;Arganzuela;Calle Alicante, 14 ;Calle;Alicante;14;;C.D.M LA FUNDI;441327,73;4471765,77;40,39442819;-3,691344761
+Punto Limpio Fijo;Arganzuela;Calle Estrella Denebola, 5 ;Calle;Estrella Denebola;5;;PUNTO LIMPIO FIJO ARGANZUELA;442002,01;4471732,98;40,39418001;-3,683397192
+Vía Pública;Barajas;Calle Ayerbe,  s/n ;Calle;Ayerbe; s/n;;;450980,09;4480124,11;40,47034978;-3,578260176
+Punto Limpio Fijo;Barajas;Calle Alhaurín, 5 ;Calle;Alhaurín;5;;PUNTO LIMPIO FIJO BARAJAS;450379;4480534,94;40,47401501;-3,585382594
+Vía Pública;Carabanchel;Calle Vía Lusitana, 10 ;Calle;Vía Lusitana;10;;;438828,32;4470657,29;40,38426264;-3,720687091
+Vía Pública;Carabanchel;Calle Camino de las Cruces,  s/n ;Calle;Camino de las Cruces; s/n;;;435871,33;4469601,52;40,37452951;-3,755415481
+Vía Pública;Carabanchel;Plaza Julio Cortázar, 2 ;Plaza;Julio Cortázar;2;;;437964,45;4472111,65;40,39730027;-3,731005495
+Punto Limpio Fijo;Carabanchel;Calle Cidro, 5 ;Calle;Cidro;5;;PUNTO LIMPIO FIJO CARABANCHEL;436684,01;4468897,89;40,36825301;-3,745773292
+Vía Pública;Centro;Plaza San Miguel, 7 ;Plaza;San Miguel;7;;;439828,51;4474082,1;40,41518783;-3,709228076
+Vía Pública;Centro;Plaza Campillo del Mundo Nuevo,  s/n ;Plaza;Campillo del Mundo Nuevo; s/n;;;439839,14;4473127,76;40,40659149;-3,709012567
+Dependencias Municipales;Centro;Calle Gran Vía de San Francisco, 1 ;Calle;Gran Vía de San Francisco;1;;CENTRO CULTURAL PUERTA DE TOLEDO;439572,66;4473192,34;40,40715393;-3,712158953
+Mercados Y Galerias;Centro;Calle Embajadores, 41 ;Calle;Embajadores;41;;MERCADO MUNICIPAL SAN FERNANDO;440279,86;4473252,45;40,40774649;-3,703830524
+Mercados Y Galerias;Centro;Plaza Cebada, 17 ;Plaza;Cebada;17;;MERCADO MUNICIPAL LA CEBADA;439780,01;4473650,22;40,41129375;-3,709758766
+Vía Pública;Chamartín;Calle Corazón de María, 51 ;Calle;Corazón de María;51;;;443461,48;4477543,13;40,44662136;-3,666717683
+Vía Pública;Chamartín;Calle Bolivia, 14 ;Calle;Bolivia;14;;;442507,44;4478664,46;40,45665733;-3,67806881
+Mercados Y Galerias;Chamartín;Calle Conde de Torralba, s/n ;Calle;Conde de Torralba;s/n;;MERCADO MUNICIPAL SAN CRISTOBAL;441962,4;4481127,3;40,47880578;-3,684721865
+Punto Limpio Fijo;Chamartín;Plaza José Maria Soler,  s/n ;Plaza;José Maria Soler; s/n;;PUNTO LIMPIO FIJO CHAMARTÍN;443406;4478882,92;40,45868701;-3,667491293
+Vía Pública;Chamberí;Calle Arapiles, 4 ;Calle;Arapiles;4;;;440193,99;4476102,52;40,43341502;-3,705110578
+Vía Pública;Chamberí;Calle Andrés Mellado, 50 ;Calle;Andrés Mellado;50;;;439412,5;4476253,85;40,43472175;-3,714338042
+Vía Pública;Ciudad Lineal;Calle Vital Aza, 47 ;Calle;Vital Aza;47;;;445619,56;4475951,48;40,43242686;-3,641134382
+Vía Pública;Ciudad Lineal;Calle Santa Genoveva,  s/n ;Calle;Santa Genoveva; s/n;;;445075,29;4475284,64;40,42638382;-3,647493232
+Vía Pública;Ciudad Lineal;Calle Gandhi,  s/n ;Calle;Gandhi; s/n;;;446186,22;4475025,59;40,42412269;-3,634375537
+Dependencias Municipales;Ciudad Lineal;Calle Treviana, 1 ;Calle;Treviana;1;;C.D.M SAN JUAN BAUTISTA;444168,6;4477658,6;40,44770932;-3,658389829
+Dependencias Municipales;Ciudad Lineal;Pasaje Santa Felicidad, 39 ;Pasaje;Santa Felicidad;39;;CENTRO CULTURAL LA ELIPA;444839;4475068,3;40,42441925;-3,650259799
+Dependencias Municipales;Ciudad Lineal;Calle Nicolás Salmerón, 8 ;Calle;Nicolás Salmerón;8;;C.D.M LA ALMUDENA;446735,5;4474339,7;40,41797916;-3,627843374
+Dependencias Municipales;Ciudad Lineal;Avenida Hermanos García Noblejas, 160 ;Avenida;Hermanos García Noblejas;160;;C.S.S LUIS VIVES;446694,9;4474996,6;40,42389431;-3,628376971
+Dependencias Municipales;Ciudad Lineal;Avenida Hermanos García Noblejas, 16 ;Avenida;Hermanos García Noblejas;16;;JUNTA MUNICIPAL CIUDAD LINEAL;445971,8;4476343,9;40,43598492;-3,637015114
+Punto Limpio Fijo;Ciudad Lineal;Avenida Daroca, 104 ;Avenida;Daroca;104;;PUNTO LIMPIO FIJO CIUDAD LINEAL;446492,01;4474350,96;40,41806501;-3,630714293
+Vía Pública;Fuencarral-El Pardo;Calle San Cugat del Vallés,  s/n ;Calle;San Cugat del Vallés; s/n;;;441165,66;4483128,15;40,4967741;-3,694306775
+Vía Pública;Fuencarral-El Pardo;Calle San Leandro,  s/n ;Calle;San Leandro; s/n;;;434307,82;4485433,29;40,5170247;-3,77546891
+Vía Pública;Fuencarral-El Pardo;Calle Monforte de Lemos, 105 ;Calle;Monforte de Lemos;105;;;440375;4481193;40,47928518;-3,703454701
+Punto Limpio Fijo;Fuencarral-El Pardo;Calle Ubeda, 6 ;Calle;Ubeda;6;;PUNTO LIMPIO FIJO FUENCARRAL;439270;4481530,9;40,48224901;-3,716522892
+Vía Pública;Hortaleza;Calle Alcorisa,  c/v Camino Silvano;Calle;Alcorisa;;c/v Camino Silvano;;445642,14;4479256,54;40,46220202;-3,641150984
+Vía Pública;Hortaleza;Calle Santa Adela, 36 Esq Carretera  Estación de Hortaleza;Calle;Santa Adela;36;Esq Carretera  Estación de Hortaleza;;444796,21;4481128,58;40,47901053;-3,651291074
+Punto Limpio Fijo;Hortaleza;Calle Tomás Redondo, 8 ;Calle;Tomás Redondo;8;;PUNTO LIMPIO FIJO HORTALEZA;446787;4480106,94;40,46993701;-3,627719493
+Vía Pública;Latina;Avenida Águilas,  s/n ;Avenida;Águilas; s/n;;;435261,18;4470742,92;40,38476447;-3,762718198
+Vía Pública;Latina;Calle José Cadalso, 78 ;Calle;José Cadalso;78;;;434741,87;4469977,89;40,37783232;-3,76875752
+Mercados Y Galerias;Latina;Calle Doña Urraca, 22 ;Calle;Doña Urraca;22;;MERCADO MUNICIPAL TIRSO DE MOLINA;438370,92;4473877,63;40,41323921;-3,726387252
+Punto Limpio Fijo;Latina;Calle Concejar Francsico José Jiménez Martín, 5 ;Calle;Concejar Francsico José Jiménez Martín;5;;PUNTO LIMPIO FIJO LATINA;437576,84;4472480,73;40,40059617;-3,735608888
+Vía Pública;Moncloa-Aravaca;Calle San Restituto, 22 ;Calle;San Restituto;22;;;439694,68;4479595,3;40,46484337;-3,711328636
+Punto Limpio Fijo;Moncloa-Aravaca;Avenida  Senda del Rey, 20 ;Avenida; Senda del Rey;20;;PUNTO LIMPIO FIJO MONCLOA ARAVACA;437241;4478162,89;40,45175801;-3,740126992
+Vía Pública;Moratalaz;Calle Hacienda de Pavones, 232 ;Calle;Hacienda de Pavones;232;;;445717,58;4472533,89;40,40164559;-3,639687136
+Vía Pública;Moratalaz;Calle Arroyo de la Media Legua, 4 ;Calle;Arroyo de la Media Legua;4;;;444178,42;4473213,01;40,40766174;-3,657883731
+Mercados Y Galerias;Moratalaz;Calle Cañada, 17 ;Calle;Cañada;17;;MERCADO MUNICIPAL DE MORATALAZ;445210,93;4472921,14;40,40510096;-3,645690699
+Mercados Y Galerias;Moratalaz;Calle Arroyo de las Pilillas, 16 ;Calle;Arroyo de las Pilillas;16;;GALERIAS EFE;444790,88;4473270,53;40,40822071;-3,650670973
+Punto Limpio Fijo;Moratalaz;Calle Arroyo de la Media Legua, 72 ;Calle;Arroyo de la Media Legua;72;;PUNTO LIMPIO FIJO MORATALAZ;444743;4473975,91;40,41457201;-3,651296493
+Vía Pública;Puente de Vallecas;Calle Doctor Lozano, 16 ;Calle;Doctor Lozano;16;;;443878,29;4472724,39;40,40323976;-3,661377518
+Vía Pública;Puente de Vallecas;Calle Cooperativa Eléctrica, 2 ;Calle;Cooperativa Eléctrica;2;;;443871,93;4469577,73;40,37489239;-3,661175195
+Vía Pública;Puente de Vallecas;Calle Ramón Pérez de Ayala,  s/n ;Calle;Ramón Pérez de Ayala; s/n;;;444823,67;4472357,65;40,39999909;-3,650205464
+Dependencias Municipales;Puente de Vallecas;Calle Puerto de Navacerrada, 1 ;Calle;Puerto de Navacerrada;1;;C.M.M NAVACERRADA;444253,2;4472504,4;40,40128315;-3,656940357
+Dependencias Municipales;Puente de Vallecas;Calle Sierra Carbonera, 74 ;Calle;Sierra Carbonera;74;;CENTRO SOCIO CULTURAL TALLERES DE CREATIVIDAD;443540,1;4471293,1;40,39032301;-3,665235846
+Dependencias Municipales;Puente de Vallecas;Calle Javier de Miguel, 10 ;Calle;Javier de Miguel;10;;C.S.S SAN DIEGO;443663,5;4471119,9;40,38877108;-3,663766665
+Dependencias Municipales;Puente de Vallecas;Calle Yuste, 8 ;Calle;Yuste;8;;C.S.S ENTREVÍAS;443251,2;4469670,5;40,37568604;-3,668495059
+Mercados Y Galerias;Puente de Vallecas;Calle Martinez de la Riva, 4 ;Calle;Martinez de la Riva;4;;MERCADO MUNICIPAL DE PUENTE DE VALLECAS;443328,6;4471864,32;40,39545449;-3,667778482
+Punto Limpio Fijo;Puente de Vallecas;Calle José Paulete, 43 ;Calle;José Paulete;43;;PUNTO LIMPIO FIJO PUENTE DE VALLECAS;444457;4471702,97;40,39407701;-3,654468893
+Vía Pública;Retiro;Avenida Mediterráneo, 47 ;Avenida;Mediterráneo;47;;;443266,66;4473125,94;40,40681569;-3,668620777
+Vía Pública;Retiro;Calle Marqués de Lozoya, 3 ;Calle;Marqués de Lozoya;3;;;443610,8;4474270,34;40,41714844;-3,664666655
+Vía Pública;Retiro;Calle Seco, 4 ;Calle;Seco;4;;;442965,98;4472258,83;40,39898378;-3,672086405
+Dependencias Municipales;Retiro;Calle José Martinez de Velasco, 22 ;Calle;José Martinez de Velasco;22;;C.S.S RETIRO;443353,2;4473996,5;40,41466407;-3,667678424
+Vía Pública;Salamanca;Calle Ardemans, 17 ;Calle;Ardemans;17;;;443000,49;4476174,52;40,43426068;-3,672030655
+Vía Pública;Salamanca;Avenida Bruselas, 57 ;Avenida;Bruselas;57;;;443767,94;4476741,02;40,43941625;-3,663033016
+Dependencias Municipales;Salamanca;Calle Elviera, 36 ;Calle;Elviera;36;;C.D.M FUENTE DEL BERRO;443558,1;4474702,9;40,42104162;-3,66532617
+Dependencias Municipales;Salamanca;Calle Nuñez de Balboa, 40 ;Calle;Nuñez de Balboa;40;;JUNTA MUNICIPAL DISTRITO SALAMANCA;442107;4475350,5;40,42677583;-3,682489281
+Dependencias Municipales;Salamanca;Calle Velazquez, 52 ;Calle;Velazquez;52;;EDIFICIO ADSCRITO A LA JUNTA MUNICIPAL DE SALAMANCA;442011,7;4475415,7;40,42735655;-3,683618625
+Dependencias Municipales;Salamanca;Calle Pilar de Zaragoza, 28 ;Calle;Pilar de Zaragoza;28;;C.S.S LA GUNDALERA;443247,7;4476088,9;40,43350632;-3,669108595
+Mercados Y Galerias;Salamanca;Calle Ayala, 28 ;Calle;Ayala;28;;MERCADO MUNICIPAL LA PAZ;441833,3;4475420,7;40,42738914;-3,685722081
+Vía Pública;San Blas-Canillejas;Calle San Román del valle,  s/n ;Calle;San Román del valle; s/n;;;447323,47;4474489,56;40,41936664;-3,620925631
+Vía Pública;San Blas-Canillejas;Calle Castillo de Uclés, 26 c/v  Calle  Altas Torres;Calle;Castillo de Uclés;26;c/v  Calle  Altas Torres;;446951,38;4475435,23;40,42786217;-3,62539024
+Dependencias Municipales;San Blas-Canillejas;Calle Arcos de Jalón, 59 ;Calle;Arcos de Jalón;59;;C.D.M SAN BLAS;448142,8;4475530,2;40,42879282;-3,611353136
+Punto Limpio Fijo;San Blas-Canillejas;Calle San Romualdo, 10 ;Calle;San Romualdo;10;;PUNTO LIMPIO FIJO SAN BLAS;447149;4476847,91;40,44060101;-3,623178093
+Vía Pública;Tetuán;Avenida Asturias,  s/n ;Avenida;Asturias; s/n;;;441283,23;4479917,11;40,46785612;-3,692622055
+Vía Pública;Tetuán;Calle Orense, 5 ;Calle;Orense;5;;;441013,35;4477647,15;40,44738828;-3,69559442
+Vía Pública;Tetuán;Calle Ceuta, 3 ;Calle;Ceuta;3;;;440740,7;4479265,1;40,46194405;-3,698960381
+Vía Pública;Usera;Avenida Orcasur,  s/n ;Avenida;Orcasur; s/n;;;440543,47;4468848,36;40,36809096;-3,700312984
+Vía Pública;Usera;Calle Guetaria, 47 Esquina con Calle Villbona;Calle;Guetaria;47;Esquina con Calle Villbona;;439239,17;4468987,87;40,36925375;-3,715687901
+Mercados Y Galerias;Usera;Calle Villabona, 2 ;Calle;Villabona;2;;MERCADO MUNICIPAL ORCASITAS;439266,6;4468950,2;40,36891637;-3,715361264
+Punto Limpio Fijo;Usera;Calle Cristo de la Victoria, 245 ;Calle;Cristo de la Victoria;245;;PUNTO LIMPIO FIJO USERA;439780;4470023,89;40,37862601;-3,709415892
+Vía Pública;Vicálvaro;Calle Pedernal, 1 ;Calle;Pedernal;1;;;449230,28;4472955,42;40,40566459;-3,598327817
+Vía Pública;Vicálvaro;Calle San Cipriano, 32 ;Calle;San Cipriano;32;;;448568,59;4472776,85;40,4040153;-3,606111119
+Vía Pública;Vicálvaro;Calle Calahorra, 17 ;Calle;Calahorra;17;;;447966,51;4473105,9;40,40694222;-3,613232992
+Mercados Y Galerias;Vicálvaro;Calle San Cipriano, 11 ;Calle;San Cipriano;11;;MERCADO MUNICIPAL DE VICÁLVARO;453159,67;4473034,12;40,40660392;-3,55202735
+Punto Limpio Fijo;Vicálvaro;Calle Sepiolita, 6 ;Calle;Sepiolita;6;;PUNTO LIMPIO FIJO VICÁLVARO;449197;4473081,9;40,40680201;-3,598730093
+Vía Pública;Villa de Vallecas;Calle Enrique García Álvarez, 5 ;Calle;Enrique García Álvarez;5;;;447884,09;4470189,67;40,38066563;-3,613965606
+Vía Pública;Villa de Vallecas;Avenida Suertes, 62 ;Avenida;Suertes;62;;;449022,05;4468725,33;40,36754425;-3,600443236
+Dependencias Municipales;Villa de Vallecas;Paseo  Federico García Lorca, 12 ;Paseo; Federico García Lorca;12;;JUNTA MUNICIPAL DISTRITO DE VILLA DE VALLECAS;447094,5;4469817,56;40,37726369;-3,623236216
+Dependencias Municipales;Villa de Vallecas;Calle Peña Veiga, 6 ;Calle;Peña Veiga;6;;C.S.S PEÑA VEIGA;447264,63;4469823,62;40,37732907;-3,621232668
+Dependencias Municipales;Villa de Vallecas;Calle Pico Mampodre, 6 ;Calle;Pico Mampodre;6;;CENTRO DE MAYORES VILLA DE VALLECAS;448550,28;4470424,21;40,38281997;-3,60613677
+Dependencias Municipales;Villa de Vallecas;Calle Zazuar, 4 ;Calle;Zazuar;4;;CENTRO CULTURAL ZAZUAR;448872,81;4470296,52;40,3816895;-3,60232695
+Dependencias Municipales;Villa de Vallecas;Calle Cerro Almodovar, 9 ;Calle;Cerro Almodovar;9;;C.D.M CERRO ALMODOVAR;445345;4469689;40,37599264;-3,6438334
+Punto Limpio Fijo;Villa de Vallecas;Calle Luis I, 36 ;Calle;Luis I;36;;PUNTO LIMPIO FIJO VILLA DE VALLECAS;445357;4469697,94;40,37607401;-3,643692793
+Vía Pública;Villaverde;Paseo  Ferroviarios, s/n ;Paseo; Ferroviarios;s/n;;;439242,76;4466651,16;40,34820366;-3,715423116
+Vía Pública;Villaverde;Calle Benimamet, 24 ;Calle;Benimamet;24;;;441803,66;4466115,66;40,34356215;-3,68522146
+Dependencias Municipales;Villaverde;Calle José Ortuño Ponce, 3 ;Calle;José Ortuño Ponce;3;;C.M.M JOSÉ ORTUÑO PONCE;439783,34;4466800,04;40,34958403;-3,709072212
+Dependencias Municipales;Villaverde;Calle Villalonso, 12 ;Calle;Villalonso;12;;C.M.M VILLALONSO;440724,14;4467040,77;40,35182005;-3,698017108
+Dependencias Municipales;Villaverde;Calle Arama, 3 ;Calle;Arama;3;;C.M.M NUESTRA SEÑORA DE LOS ÁNGELES;441690,93;4466671,42;40,34856086;-3,686599476
+Dependencias Municipales;Villaverde;Calle Leonor Góngora, 62 ;Calle;Leonor Góngora;62;;C.M.M EDUARDO MINGUITO;441973,86;4467272,14;40,35399224;-3,683322771
+Dependencias Municipales;Villaverde;Calle Concepción de la Oliva, s/n ;Calle;Concepción de la Oliva;s/n;;C.M.M LA PLATANERA;441274,84;4466022,31;40,3426841;-3,691438957
+Dependencias Municipales;Villaverde;Plaza Pinazo, s/n ;Plaza;Pinazo;s/n;;C.M.M MARIA ZAMBRANO;441548,06;4467810,91;40,35881607;-3,688386061
+Dependencias Municipales;Villaverde;Avenida Felicidad, 26 ;Avenida;Felicidad;26;;C.M.M MIGUEL DELIBES;441548,06;4467810,91;40,35881607;-3,688386061
+Dependencias Municipales;Villaverde;Calle San Luciano, 16 ;Calle;San Luciano;16;;C.M.M SAN LUCIANO;440723.95;4468285.58;40,363034;-3,698135003
+Mercados Y Galerias;Villaverde;Calle Alberto Palacios, 18 ;Calle;Alberto Palacios;18;;MERCADO MUNICIPAL DE VILLAVERDE;439480,77;4466099,14;40,34324803;-3,712568368
+Punto Limpio Fijo;Villaverde;Avenida Real de Pinto, 108 ;Avenida;Real de Pinto;108;;PUNTO LIMPIO FIJO DE VILLAVERDE;439669,01;4465583,89;40,33862001;-3,710303492
+Punto Limpio De Movilidad;Villaverde;Avenida Real de Pinto, 108 ;Avenida;Real de Pinto;108;;PUNTO LIMPIO FIJO DE VILLAVERDE;439669,01;4465583,89;40,33862001;-3,710303492
+Punto Limpio De Proximidad;Villaverde;Avenida Real de Pinto, 108 ;Avenida;Real de Pinto;108;;PUNTO LIMPIO FIJO DE VILLAVERDE;439669,01;4465583,89;40,33862001;-3,710303492
+Dependencias Municipales;Chamartín;Calle Mantuano, 51 ;Calle;Mantuano;51;;CENTRO CULTURAL NICOLÁS SALMERÓN;442658,88;4477740;40,44833985;-3,676199338
+Dependencias Municipales;Chamartín;Paseo Castellana, 304 ;Paseo;Castellana;304;;CENTRO DE MAYORES CASTILLA;441951,33;4481377,35;40,48105756;-3,684875351
+Dependencias Municipales;Chamartín;Calle Santa Hortensia, 15 ;Calle;Santa Hortensia;15;;CENTRO DE MAYORES SANTA HORTENSIA;443252,05;4477337,77;40,44475706;-3,669168854
+Dependencias Municipales;Latina;Calle Fuente del Tiro, 72 ;Calle;Fuente del Tiro;72;;CENTRO SOCIOCULTURAL ALMIRANTE CHURRUCA;433795,98;4470560,79;40,38300867;-3,779959987
+Dependencias Municipales;Latina;Calle Serradilla, 13 ;Calle;Serradilla;13;;CENTRO CULTURAL MIGUEL HERNÁNDEZ;433628,79;4470096,72;40,37881485;-3,78188117
+Dependencias Municipales;Latina;Calle Rodrigo Arana, 50 ;Calle;Rodrigo Arana;50;;CENTRO SOCIOCULTURAL LATINA;434975,7;4470121,89;40,37914778;-3,766017922
+Dependencias Municipales;Latina;Calle María del Carmen, 65 ;Calle;María del Carmen;65;;CENTRO SOCIOCULTURAL ROSARIO ACUÑA;437827,33;4473132,93;40,40649022;-3,732720948
+Dependencias Municipales;San Blas-Canillejas;Calle Febrero, 4 ;Calle;Febrero;4;;CENTRO CULTURAL JOSÉ LUIS LÓPEZ VÁZQUEZ;451429;4477506,9;40,44679862;-3,572764577
+Dependencias Municipales;San Blas-Canillejas;Calle Aliaga, 5 ;Calle;Aliaga;5;;CENTRO CULTURAL MIGUEL DE CERVANTES;448138,4;4476445,5;40,43703813;-3,611479693
+Dependencias Municipales;San Blas-Canillejas;Calle Boltaña, 27 ;Calle;Boltaña;27;;CENTRO CULTURAL BUERO VALLEJO;448141,7;4477503,3;40,44656763;-3,611527135
+Dependencias Municipales;San Blas-Canillejas;Plaza Mayor Ciudad Pegaso,  s/n ;Plaza;Mayor Ciudad Pegaso; s/n;;CENTRO MUNICIPAL DE MAYORES CIUDAD PEGASO;449544,4;4477553,2;40,44710347;-3,594990938
+Dependencias Municipales;Villa de Vallecas;C/ Del Tranvía de Arganda, 4;Calle;Tranvía de Arganda;4;;CENTRO MUNICIPAL DE PALOMERAS;;;40,38263;-3,6342
+Mercados Y Galerias;Chamartín;Calle Bolivia, 9;Calle;Bolivia;9;;MERCADO MUNICIPAL DE CHAMARTÍN;;;40,45754;-3,67829
+Dependencias Municipales;San Blas-Canillejas;Avenida Séptima, 11;Avenida;Séptima;11;;C.C CIUDAD PEGASO;;;40,44909;-3,59804
