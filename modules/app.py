@@ -16,11 +16,12 @@ from sklearn.metrics.pairwise import haversine_distances
 from math import radians
 import time 
 from geopy.distance import geodesic
+from api import client as api
 
 st.title('Gestión de residuos Madrid')
 
 #Select box
-bin_type = st.selectbox('Selecciona el tipo de residuo:', ['Ropa', 'Resto', 'Orgánica', 'Envases', 'Papel','Vidrio','Pilas','Aceite','Enseres','Restos de poda','Jeringuillas','Cintas y CDs','Escombros','Metales','Cápsulas café'])
+bin_type = st.selectbox('Selecciona el tipo de residuo:', ['Ropa', 'Resto', 'Orgánica', 'Envases', 'Papel','Vidrio','Pilas','Aceite','Enseres','Restos de poda','Jeringuillas','Cintas y CDs','Escombros','Metal','Cápsulas café', 'Electrodomésticos','Material peligroso'])
 
 # Display the map based on the selection
 dataframes_map = {
@@ -48,8 +49,8 @@ color_map = {
 
 standard_size = 50
 specific_bin_types = [
-    'Enseres', 'Restos de poda', 'Jeringuillas',
-    'Cintas y CDs', 'Escombros', 'Metales', 'Cápsulas café'
+    'Enseres','Restos de poda','Jeringuillas','Cintas y CDs',
+    'Escombros','Metal','Cápsulas café', 'Electrodomésticos','Material peligroso'
 ]
 if bin_type in dataframes_map:
      df_to_display = dataframes_map[bin_type]
@@ -79,7 +80,15 @@ if user_address:
             nearest_location = df_to_display.loc[df_to_display['DISTANCE'].idxmin()]
             nearest_df = pd.DataFrame([nearest_location])
 
-            st.write(f"El contenedor de {bin_type} más cercano está en: {nearest_location['DIRECTIONS']}, a {nearest_location['DISTANCE']:.2f} km de distancia.")
+            if bin_type in specific_bin_types or bin_type == 'Varios':
+                is_in_moviles = nearest_df.index.isin(moviles.index).any()
+                if is_in_moviles:
+                    schedule_info = nearest_location.get('SCHEDULE', 'No disponible')
+                    st.write(f"El punto limpio móvil más cercano para {bin_type} está en: {nearest_location['DIRECTIONS']}, a {nearest_location['DISTANCE']:.2f} km de distancia.\nHorario: {schedule_info}")
+                else:
+                    st.write(f"El punto limpio más cercano para {bin_type} está en: {nearest_location['DIRECTIONS']}, a {nearest_location['DISTANCE']:.2f} km de distancia.")
+            else:
+                st.write(f"El contenedor de {bin_type} más cercano está en: {nearest_location['DIRECTIONS']}, a {nearest_location['DISTANCE']:.2f} km de distancia.")
 
             # Map setup
             all_locations_layer = pdk.Layer(

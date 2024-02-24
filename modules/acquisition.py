@@ -53,6 +53,7 @@ m_pilas_marquesinas = m_pilas_marquesinas.rename(columns={'Direccion_completa': 
 m_puntos_limpios_moviles = m_puntos_limpios_moviles.rename(columns={'LATITUD': 'LATITUDE'})
 m_puntos_limpios_moviles = m_puntos_limpios_moviles.rename(columns={'LONGITUD': 'LONGITUDE'})
 m_puntos_limpios_moviles = m_puntos_limpios_moviles.rename(columns={'DIRECCION_COMPLETA': 'DIRECTIONS'})
+m_puntos_limpios_moviles['SCHEDULE'] = m_puntos_limpios_moviles['DÍA SEMANA'].astype(str) + ' '+ m_puntos_limpios_moviles['HORA INICIO'].astype(str)+ ' - '+ m_puntos_limpios_moviles['HORA FINAL'].astype(str)
 #Aceite
 m_aceite = m_aceite.rename(columns={'LATITUD': 'LATITUDE'})
 m_aceite = m_aceite.rename(columns={'LONGITUD': 'LONGITUDE'})
