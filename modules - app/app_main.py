@@ -22,12 +22,12 @@ from acquisition import (
     m_aceite as aceite
 )
 
-st.title('Gestión de residuos Madrid')
+st.title('The Recycling Act - Madrid')
 
 # Function definitions
 def get_nearest_locations(user_lat, user_lon, df, bin_type):
     df['DISTANCE'] = df.apply(lambda row: geodesic((user_lat, user_lon), (row['LATITUDE'], row['LONGITUDE'])).km, axis=1)
-    
+
     if len(bin_type) > 1:
         # Aggregate distances by location and count unique bin types per location
         aggregated = df.groupby(['LATITUDE', 'LONGITUDE']).agg({'DISTANCE': 'mean', 'TYPE': pd.Series.nunique}).reset_index()
@@ -54,7 +54,8 @@ def get_route(start_lat, start_lon, end_lat, end_lon):
     else:
         return None
 
-def display_map(user_lat, user_lon, df_to_display, route=None):
+
+def display_map(user_lat, user_lon, df_to_display, route=None, user_address=None):
     layers = []
     color_map = {
     'Aceite': [255, 165, 0],  # Orange
@@ -67,30 +68,21 @@ def display_map(user_lat, user_lon, df_to_display, route=None):
     'Ropa': [255, 192, 203],  # Pink
     'Varios': [128, 128, 128]  # Grey for combined categories
     }
-    tooltip = {
-        "html": "<b>Dirección:</b> {DIRECTIONS}",
-        "style": {
-            "backgroundColor": "steelblue",
-            "color": "white",
-            "fontSize": "10px",
-            "padding": "3px",
-            "maxWidth": "100px"
-        }
-    }
+
     # Check if more than one type is selected and add colored layers accordingly
     if len(df_to_display['TYPE'].unique()) > 1:
         for bin_type in df_to_display['TYPE'].unique():
             df_filtered = df_to_display[df_to_display['TYPE'] == bin_type]
-            color = color_map.get(bin_type, color_map['Varios'])  # Default to 'Varios' if not found
+            color = [255, 0, 0]  # Default to 'Varios' if not found
             layer = pdk.Layer(
                 'ScatterplotLayer',
                 df_filtered,
                 get_position='[LONGITUDE, LATITUDE]',
                 get_color=color,  # Use the color map
-                get_radius=50,
+                get_radius=30,
                 pickable=True,
                 auto_highlight=True,
-                tooltip=tooltip
+                tooltip={"text": f"Dirección: {{DIRECTIONS}}"}
             )
             layers.append(layer)
     else:
@@ -99,32 +91,65 @@ def display_map(user_lat, user_lon, df_to_display, route=None):
             'ScatterplotLayer',
             df_to_display,
             get_position='[LONGITUDE, LATITUDE]',
-            get_color=[128, 128, 128],  # Neutral color
-            get_radius=50,
+            get_color=[255, 0, 0],  # Neutral color
+            get_radius=30,
             pickable=True,
-            auto_highlight=True
+            auto_highlight=True,
+            tooltip={"text": f"Dirección: {{DIRECTIONS}}"}
         )
         layers.append(neutral_layer)
-    
+
     # Add route layer if route data is available
-    if route:
-        route_geometry = route['features'][0]['geometry']
+    if route and 'features' in route and len(route['features']) > 0:
+        #route_geometry = route['features'][0]['geometry']
         route_layer = pdk.Layer(
-            'PathLayer',
-            data=pd.DataFrame({"path": [route_geometry['coordinates']]}),
-            get_path="path",
-            width_scale=20,
-            width_min_pixels=2,
-            get_color=[255, 100, 100],  # Color for the route
-            pickable=True,
-        )
-        layers.append(route_layer)
+        'PathLayer',
+        data=pd.DataFrame({"path": [route['features'][0]['geometry']['coordinates']]}),
+        get_path="path",
+        width_scale=20,
+        width_min_pixels=2,
+        get_color=[255, 100, 100],  # Color for the route
+        pickable=True,
+    )
+    layers.append(route_layer)
     
+    origin_layer = pdk.Layer(
+                'ScatterplotLayer',
+                data=[{
+                    "position": [user_lon, user_lat],
+                    "DIRECTIONS": user_address if user_address else 'Inicio ruta no especificada'
+                }],
+                get_position='position',
+                get_color=[0, 0, 255],  # Blue color for the origin point
+                get_radius=20,  # Adjust size as needed
+                pickable=True,
+                tooltip = {"text": "{DIRECTIONS}"}
+    )
+    layers.append(origin_layer)
+
+    if not df_to_display.empty:
+        endpoint_address = df_to_display.iloc[0]['DIRECTIONS']  # Assuming this contains the destination address
+
+        # Create an IconLayer for the endpoint
+        destination_layer = pdk.Layer(
+            "IconLayer",
+            data=[{
+                "position": route['features'][0]['geometry']['coordinates'][-1],
+                "DIRECTIONS": endpoint_address 
+            }],
+            get_position='position',
+            get_color=[255, 0, 0],  # Red color for the destination point
+            get_radius=30,
+            pickable=True,
+            tooltip={"text": "{DIRECTIONS}"}
+        )
+        layers.append(destination_layer)
+           
+
     r = pdk.Deck(
         layers=layers,
-        initial_view_state=pdk.ViewState(latitude=user_lat, longitude=user_lon, zoom=13),
+        initial_view_state=pdk.ViewState(latitude=user_lat, longitude=user_lon, zoom=14),
         map_style='mapbox://styles/mapbox/light-v9',
-        tooltip=tooltip
     )
     st.pydeck_chart(r)
 
@@ -193,32 +218,54 @@ if user_address:
             df_to_display.dropna(subset=['LATITUDE', 'LONGITUDE'], inplace=True)
 
             if not df_to_display.empty:
-                nearest_location = get_nearest_locations(user_lat, user_lon, df_to_display, bin_type)
-                    # Display nearest location information to the user
-                if not nearest_location.empty:
-                    displayed_addresses = set()  # Track displayed addresses to avoid duplicates
-        
-        # Format the bin types selected by the user for display
-                    types_str = ", ".join(bin_type[:-1]) + " y " + bin_type[-1] if len(bin_type) > 1 else bin_type[0]
-        
-                    for _, loc in nearest_location.iterrows():
-                        address = f"{loc['DIRECTIONS']}, a {loc['DISTANCE']:.2f} km de distancia."
-                        if address not in displayed_addresses:
-                # Display the message with user-selected bin types (not the 'TYPE' column from df)
-                            st.write(f"Los contenedores de {types_str} más cercanos están en: {address}")
-                            displayed_addresses.add(address)  # Mark this address as displayed
-        
-        # Calculate and display the route to the first nearest location
-                    first_nearest_location = nearest_location.iloc[0]
-                    route = get_route(user_lat, user_lon, first_nearest_location['LATITUDE'], first_nearest_location['LONGITUDE'])
-                    if route:
-                        display_map(user_lat, user_lon, df_to_display, route)
-                    else:
-                            st.error("No se pudo obtener la ruta. Asegúrate de que tu API key es válida y tienes acceso a Internet.")
+                
+                df_to_display['DISTANCE'] = df_to_display.apply(lambda row: geodesic((user_lat, user_lon), (row['LATITUDE'], row['LONGITUDE'])).km, axis=1)
+
+    # Aggregate data to find locations offering the most bin types
+                aggregated_data = df_to_display.groupby(['LATITUDE', 'LONGITUDE']).agg({
+                    'DISTANCE': 'mean',  # Average distance to user for each group
+                    'TYPE': lambda x: len(set(x))  # Count of unique bin types per group
+                }).reset_index()
+
+    # Sort by the number of bin types and then by distance
+                aggregated_data.sort_values(by=['TYPE', 'DISTANCE'], ascending=[False, True], inplace=True)
+
+            if not aggregated_data.empty:
+        # Select the top location offering the most bin types within the shortest distance
+                optimal_location = aggregated_data.iloc[0]
+                disposal_lat = optimal_location['LATITUDE']
+                disposal_lon = optimal_location['LONGITUDE']
+
+    # Fetch the route data from the user's location to the disposal point
+                route = get_route(user_lat, user_lon, disposal_lat, disposal_lon)
+
+        # Find all entries in df_to_display that match the optimal location's coordinates
+                optimal_entries = df_to_display[(df_to_display['LATITUDE'] == optimal_location['LATITUDE']) & (df_to_display['LONGITUDE'] == optimal_location['LONGITUDE'])]
+
+        # Ensure the display message combines all selected types
+                types_str = ", ".join(bin_type[:-1]) + " y " + bin_type[-1] if len(bin_type) > 1 else bin_type[0]
+                address = f"{optimal_entries.iloc[0]['DIRECTIONS']}, a {optimal_location['DISTANCE']:.2f} km de distancia"
+                if 'SCHEDULE' in optimal_entries.columns:
+                    schedule = optimal_entries.iloc[0]['SCHEDULE']
+                    if pd.isnull(schedule): 
+                        summary_message = f"El punto óptimo que reúne los contenedores de {types_str} está en: {address}. Horario no disponible"             
+                    else: 
+                        summary_message = f"El punto óptimo que reúne los contenedores de {types_str} está en: {address}. Horario: {schedule}"
                 else:
-                    st.write("No se encontraron puntos de recogida cercanos para los tipos de residuos seleccionados.")
+                    summary_message = f"El punto óptimo que reúne los contenedores de {types_str} está en: {address}. Horario no disponible"
+
+                st.write(summary_message)
+                
+
+        # Display the map pointing to the optimal location
+                try:
+                    display_map(user_lat=user_lat, user_lon=user_lon, df_to_display=optimal_entries, route=route,user_address=user_address)
+                except Exception as e:
+                    st.error(f"Error al mostrar el mapa: {e}")
             else:
-                st.write("No se han encontrado datos para los tipos de residuos seleccionados.")
+                st.write("No se encontraron puntos de recogida cercanos para los tipos de residuos seleccionados.")
+            #else:
+                #st.write("No se han encontrado datos para los tipos de residuos seleccionados.")
         else:
             st.error("No se pudo identificar la ubicación. Intenta con una dirección más específica.")
     except Exception as e:
