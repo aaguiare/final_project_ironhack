@@ -50,14 +50,14 @@ This repository will include the following elements (apart from the ones defined
 
 💥**Technology stack**
 
-Phyton, SkLearn, Pandas, Pydeck, Streamlit
+Python, SkLearn, Pandas, Pydeck, Streamlit
 
 👀**Context**
 
 This repository is the final project for the Part Time Data Analytics Bootcamp in March 2024, which had the following goals:
 
 - Create a streamlit app to visualize all the recycling bins in madrid by type, as well as sharing the most optimal route from the start point of the user to the combinations of bins that are being targeted by residue type. Defined in modules_app py files and displayed in local.
-- Create a modellization to extrapolate the number of illegal landfills that could be found in the community of Madrid by the features of the ones already found in the territory. Defined in notebooks folder.
+- Create a modelization to extrapolate the number of illegal landfills that could be found in the community of Madrid by the features of the ones already found in the territory. Defined in notebooks folder.
 
 💣 **Reporting Architecture**
 

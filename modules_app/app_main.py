@@ -24,7 +24,7 @@ from acquisition import (
 )
 
 #First phase
-st.title('Recyclinator - Madrid')
+st.title('ReciRutas Madrid')
 
 # Function definitions
 @st.cache_data(show_spinner=False)
@@ -83,7 +83,7 @@ def display_map(user_lat, user_lon, df_to_display, route=None, user_address=None
                 df_filtered,
                 get_position='[LONGITUDE, LATITUDE]',
                 get_color=color,  # Use the color map
-                get_radius=30,
+                get_radius=50,
                 pickable=True,
                 auto_highlight=True,
                 tooltip={"text": f"Dirección: {{DIRECTIONS}}"}
@@ -96,7 +96,7 @@ def display_map(user_lat, user_lon, df_to_display, route=None, user_address=None
             df_to_display,
             get_position='[LONGITUDE, LATITUDE]',
             get_color=[255, 0, 0],  # Neutral color
-            get_radius=30,
+            get_radius=50,
             pickable=True,
             auto_highlight=True,
             tooltip={"text": f"Dirección: {{DIRECTIONS}}"}
@@ -117,19 +117,19 @@ def display_map(user_lat, user_lon, df_to_display, route=None, user_address=None
     )
     layers.append(route_layer)
     
-    origin_layer = pdk.Layer(
-                'ScatterplotLayer',
-                data=[{
-                    "position": [user_lon, user_lat],
-                    "DIRECTIONS": user_address if user_address else 'Inicio ruta no especificada'
-                }],
-                get_position='position',
-                get_color=[0, 0, 255],  # Blue color for the origin point
-                get_radius=20,  # Adjust size as needed
-                pickable=True,
-                tooltip = {"text": "{DIRECTIONS}"}
-    )
-    layers.append(origin_layer)
+    #origin_layer = pdk.Layer(
+                #'ScatterplotLayer',
+                #data=[{
+                    #"position": [user_lon, user_lat],
+                    #"DIRECTIONS": user_address if user_address else 'Inicio ruta no especificada'
+                #}],
+                #get_position='position',
+                #get_color=[0, 0, 255],  # Blue color for the origin point
+                #get_radius=50,  # Adjust size as needed
+                #pickable=True,
+                #tooltip = {"text": "{DIRECTIONS}"}
+    #)
+    #layers.append(origin_layer)
 
     if not df_to_display.empty:
         endpoint_address = df_to_display.iloc[0]['DIRECTIONS']  # Assuming this contains the destination address
@@ -277,7 +277,7 @@ if user_address:
 
 # Second phase
 
-st.title('Recycling Map of Madrid')
+st.title('Recicla Maestro')
 
 dataframes_map2 = {
     'Textil (No-reusable)': ropa,
