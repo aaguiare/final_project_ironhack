@@ -374,9 +374,33 @@ st.pydeck_chart(r2)
 # Sidebar Legend for bin types
 @st.cache_data(show_spinner=False)
 def render_sidebar_legend(color_map):
-    st.sidebar.title("Legend")
+    #st.sidebar.title("Legend")
     for bin_type, color in color_map.items():
         st.sidebar.markdown(f"<span style='color: rgb({color[0]}, {color[1]}, {color[2]});'>■</span> {bin_type}", unsafe_allow_html=True)
 
 # Assuming color_map2 is defined and populated with your data
 render_sidebar_legend(color_map2)
+
+#Phase 3
+
+st.title('Data Modeling - Illegal landfill prospection')
+
+
+df3 = pd.read_csv('../data/Madrid/puntos_negros_predictions_top10.csv')
+
+# Create a pydeck map
+view_state3 = pdk.ViewState(latitude=df3['LATITUDE'].mean(), longitude=df3['LONGITUDE'].mean(), zoom=8)
+
+# Define the layer
+layer3 = pdk.Layer(
+    'ScatterplotLayer',
+    df3,
+    get_position=['LONGITUDE', 'LATITUDE'],
+    get_radius='puntos_negros_True * 15000',  # Adjust size multiplier as needed
+    get_fill_color=[255, 0, 0, 160],  # RGBA color of the points
+    pickable=True
+)
+
+# Render the map
+r3 = pdk.Deck(layers=[layer3], initial_view_state=view_state3,map_style='mapbox://styles/mapbox/light-v9')
+st.pydeck_chart(r3)
