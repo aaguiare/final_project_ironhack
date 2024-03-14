@@ -16,7 +16,7 @@ The project consists of the data exploration, visualization and modellization of
 This repository will include the following elements (apart from the ones defined in **Data**): 
 
 - All the modules used to create the streamlit app that will be defined below
-- All the essential notebooks for data exploration and modellization of data
+- All the essential notebooks for data exploration and data modeling
 
 ```
 
@@ -54,10 +54,12 @@ Python, SkLearn, Pandas, Pydeck, Streamlit
 
 👀**Context**
 
+❗*Note that all Streamlit content is set in spanish as it's oriented to spanish market*❗
+
 This repository is the final project for the Part Time Data Analytics Bootcamp in March 2024, which had the following goals:
 
-- Create a streamlit app to visualize all the recycling bins in madrid by type, as well as sharing the most optimal route from the start point of the user to the combinations of bins that are being targeted by residue type. Defined in modules_app py files and displayed in local.
-- Create a modelization to extrapolate the number of illegal landfills that could be found in the community of Madrid by the features of the ones already found in the territory. Defined in notebooks folder.
+- Create a streamlit app to visualize all the recycling bins in madrid by type, as well as sharing the most optimal route from the start point of the user to the combinations of bins that are being targeted by residue type. Defined in modules_app py files (app_main) and displayed in local.
+- Create a modelization to extrapolate the number of illegal landfills that could be found in the community of Madrid by the features of the ones already found in the territory. Process can be found in the Jupyter notebooks (data_preprocessing_landfills, Model preparation_combined dfs) and the results are included visually in Streamlit app as a map.
 
 💣 **Reporting Architecture**
 
@@ -71,7 +73,7 @@ Clean and preprocess the data to ensure it includes coordinates (latitude and lo
 
 2. Development Environment Setup:
 
-Install necessary Python libraries, including Streamlit, pandas, numpy, and any libraries needed for route optimization.
+Install necessary Python libraries, including Streamlit, pandas, numpy, geopy and requests.
 
 3. App Design and Development:
 
@@ -107,17 +109,17 @@ Select relevant features for the model based on correlation analysis or domain k
 
 4. Model Selection and Training:
 
-Test classification models for predictive modeling, such as XGBoost or Logistic Regression.
 Split the data into training and testing sets and train the model on the training set.
+Test classification models for predictive modeling, such as XGBoost or Logistic Regression.
 
 5. Model Evaluation and Tuning:
 
 Evaluate the model's performance using appropriate metrics, such as accuracy.
 
-6. Extrapolation and Analysis:
+6. Extrapolation visualizationand Analysis:
 
 Use the trained model to predict potential illegal landfill sites across the community of Madrid.
-Analyze the predictions to identify patterns or hotspots for illegal landfills.
+Analyze the predictions to identify patterns or hotspots for illegal landfills, while visualizing the first results in map on Stremlit app.
 
 💩 **ToDo**
 
