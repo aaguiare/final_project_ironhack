@@ -60,7 +60,13 @@ This repository is the final project for the Part Time Data Analytics Bootcamp i
 
 - Create a streamlit app to visualize all the recycling bins in madrid by type, as well as sharing the most optimal route from the start point of the user to the combinations of bins that are being targeted by residue type. Defined in modules_app py files (app_main) and displayed in local.
 
+<img width="1295" alt="maps" src="https://github.com/aaguiare/final_project_ironhack/assets/141459981/15829985-8aa2-4a15-9bf2-5e9717f76b39">
+
+<img width="553" alt="routing" src="https://github.com/aaguiare/final_project_ironhack/assets/141459981/b46560b0-5791-4ffb-8d93-a6fbaaa858e8">
+
 - Create a modelization to extrapolate the number of illegal landfills that could be found in the community of Madrid by the features of the ones already found in the territory. Process can be found in the Jupyter notebooks (data_preprocessing_landfills, Model preparation_combined dfs) and the results are included visually in Streamlit app as a map.
+
+<img width="747" alt="modeling" src="https://github.com/aaguiare/final_project_ironhack/assets/141459981/aa3aad31-c1ac-47af-a1ed-7169e1884147">
 
 💣 **Reporting Architecture**
 
